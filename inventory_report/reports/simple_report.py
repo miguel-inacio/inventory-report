@@ -4,7 +4,7 @@ from collections import Counter
 
 class SimpleReport:
     @classmethod
-    def get_oldest_manufacturing_date(cls, report):
+    def get_oldest_manufacturing_date(cls, report: list[dict]):
         all_manufacturing_dates = [
             entry["data_de_fabricacao"] for entry in report
         ]
@@ -16,7 +16,7 @@ class SimpleReport:
         return oldest_date
 
     @classmethod
-    def get_nearest_expiration_date(cls, report):
+    def get_nearest_expiration_date(cls, report: list[dict]):
         now = datetime.today().strftime("%Y-%m-%d")
         all_expiration_dates = [
             entry["data_de_validade"]
@@ -33,13 +33,13 @@ class SimpleReport:
         return nearest_expiration_date
 
     @classmethod
-    def get_most_common_company(cls, report):
+    def get_most_common_company(cls, report: list[dict]):
         companies = [entry["nome_da_empresa"] for entry in report]
         companies_and_frequency = Counter(companies)
         return companies_and_frequency.most_common()
 
     @classmethod
-    def generate(cls, report):
+    def generate(cls, report: list[dict]):
         oldest_manufacturing_date = cls.get_oldest_manufacturing_date(report)
         nearest_expiration_date = cls.get_nearest_expiration_date(report)
         company_with_more_products = cls.get_most_common_company(report)
