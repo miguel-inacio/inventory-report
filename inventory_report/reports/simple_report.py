@@ -36,7 +36,7 @@ class SimpleReport:
     def get_most_common_company(cls, report):
         companies = [entry["nome_da_empresa"] for entry in report]
         companies_and_frequency = Counter(companies)
-        return companies_and_frequency.most_common(1)[0][0]
+        return companies_and_frequency.most_common()
 
     @classmethod
     def generate(cls, report):
@@ -47,5 +47,5 @@ class SimpleReport:
         return (
             f"Data de fabricação mais antiga: {oldest_manufacturing_date}\n"
             f"Data de validade mais próxima: {nearest_expiration_date}\n"
-            f"Empresa com mais produtos: {company_with_more_products}"
+            f"Empresa com mais produtos: {company_with_more_products[0][0]}"
         )
