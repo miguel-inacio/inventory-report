@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 from inventory_report.reports.simple_report import SimpleReport
 from inventory_report.reports.complete_report import CompleteReport
 import csv
+import json
 
 
 class ReportReaderStrategy(ABC):
@@ -16,6 +17,15 @@ class CSVFileReader(ReportReaderStrategy):
         with open(path) as file:
             read_file = csv.DictReader(file)
             formatted_file = [row for row in read_file]
+            return formatted_file
+
+
+class JSONFileReader(ReportReaderStrategy):
+    @classmethod
+    def read(cls, path):
+        with open(path) as file:
+            read_file = file.read()
+            formatted_file = json.loads(read_file)
             return formatted_file
 
 
