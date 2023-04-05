@@ -3,6 +3,7 @@ from inventory_report.reports.simple_report import SimpleReport
 from inventory_report.reports.complete_report import CompleteReport
 import csv
 import json
+import xmltodict
 
 
 class ReportReaderStrategy(ABC):
@@ -27,6 +28,15 @@ class JSONFileReader(ReportReaderStrategy):
             read_file = file.read()
             formatted_file = json.loads(read_file)
             return formatted_file
+
+
+class XMLFileReader(ReportReaderStrategy):
+    @classmethod
+    def read(cls, path):
+        with open(path) as file:
+            read_file = file.read()
+            formatted_file = xmltodict.parse(read_file)
+            return formatted_file["dataset"]["record"]
 
 
 class ReportTypeStrategy(ABC):
