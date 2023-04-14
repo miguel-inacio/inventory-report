@@ -35,29 +35,30 @@ Instale as dependências
   <summary> Observações </summary>
   
   ### Os seguintes módulos e seus conteúdos foram desenvolvidos por mim:
-  Em inventory_report:
-    - main.py
+Em inventory_report:
+- main.py
+
+/importer:
+- csv_importer.py
+- importer.py
+- json_importer.py
+- xml_importer.py
+
+/inventory:
+- inventory_iterator.py
+- inventory_refactor.py
+- inventory.py
+- product.py
+    
+ /reports:
+- complete_report.py
+- simple_report.py
     <hr>
-    /importer:
-        - csv_importer.py
-        - importer.py
-        - json_importer.py
-        - xml_importer.py
-    <hr>
-    /inventory:
-        - inventory_iterator.py
-        - inventory_refactor.py
-        - inventory.py
-        - product.py
-    /reports:
-        - complete_report.py
-        - simple_report.py
-  Em tests:
-    /product:
-        - test_product.py
-    /product_report:
-        - test_product_report.py
-    /report_decorator:
-        - test_report_decorator.py
-  
+Em tests:
+/product:
+- test_product.py
+/product_report:
+- test_product_report.py
+/report_decorator:
+- test_report_decorator.py
 </details>
