@@ -2,8 +2,8 @@
 
 Projeto desenvolvido no curso de desenvolvimento web da Trybe, no módulo de Ciência da Computação.
 
-### Tecnologias utilizadas:
-- Python
+### Abordagem:
+- Utilizar Python, conhecimentos em programação orientada a objetos e padrões de projeto para construir um programa capaz de gerar relatórios de estoque.
 
 ### Rodando localmente
 
