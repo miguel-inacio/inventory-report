@@ -37,11 +37,13 @@ Instale as dependências
   ### Os seguintes módulos e seus conteúdos foram desenvolvidos por mim:
   Em inventory_report:
     - main.py
+    <hr>
     /importer:
         - csv_importer.py
         - importer.py
         - json_importer.py
         - xml_importer.py
+    <hr>
     /inventory:
         - inventory_iterator.py
         - inventory_refactor.py
