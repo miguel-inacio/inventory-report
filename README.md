@@ -1,13 +1,61 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Projeto Inventory Report 💻 
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+Projeto desenvolvido no curso de desenvolvimento web da Trybe, no módulo de Ciência da Computação.
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+### Tecnologias utilizadas:
+- Python
+
+### Rodando localmente
+
+Clone o repositório
+
+```bash
+  git clone git@github.com:miguel-inacio/inventory-report.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd inventory-report
+```
+
+Crie e entre em um ambiente virtual
+
+```bash
+    python3 -m venv .venv && source .venv/bin/activate
+```
+
+Instale as dependências
+
+```bash
+ python3 -m pip install -r dev-requirements.txt
+```
+
+<details>
+  <summary> Observações </summary>
+  
+  ### Os seguintes módulos e seus conteúdos foram desenvolvidos por mim:
+  Em inventory_report:
+    - main.py
+    /importer:
+        - csv_importer.py
+        - importer.py
+        - json_importer.py
+        - xml_importer.py
+    /inventory:
+        - inventory_iterator.py
+        - inventory_refactor.py
+        - inventory.py
+        - product.py
+    /reports:
+        - complete_report.py
+        - simple_report.py
+  Em tests:
+    /product:
+        - test_product.py
+    /product_report:
+        - test_product_report.py
+    /report_decorator:
+        - test_report_decorator.py
+  
+</details>
